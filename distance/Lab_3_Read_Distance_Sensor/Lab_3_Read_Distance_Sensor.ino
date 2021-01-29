@@ -21,7 +21,14 @@ void loop() {
 
    int sensorValue = analogRead(A0);     
    float voltage = sensorValue * (5.0 / 1023.0);  
-   Serial.print("X,"); Serial.print(voltage); Serial.print("  ");   
+    
+    //y = mx + c
+    
+   float distance = -22.58*voltage+58.591;  // we are doing this formula to calibrate our distance sensor
+                                            // voltage is now been converted to a distance
+                                            
+   
+   Serial.print("X,"); Serial.print(distance); Serial.print("  ");   
    Serial.println(" ");
    delay(200);
   // note that if you change the serial print to sensorValue you can see the real value from the sensor
