@@ -1,5 +1,3 @@
-//#define PIN_LED1 3
-
 
 /*
  * BLINKER CLASS DEFINITION
